@@ -1,1 +1,13 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+@import "setting/media";
+@import "setting/variables";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/layout";
+@import "module/button";
+@import "module/sidebar";
+@import "module/form";
+@import "pages/home";
+@import "pages/quiz";
+@import "pages/mypage";
+@import "pages/keyword";
