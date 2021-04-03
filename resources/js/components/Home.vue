@@ -1,87 +1,72 @@
 <template>
   <div>
-    <header>
-      <div class="container text-center">
-        <h1>4 Answers Quiz 4択クイズ&クイズ徹底解説</h1>
-        <a href="/">
-          <img class="header-nav__logo" src="/public/images/header-logo.png" />
-        </a>
-      </div>
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-          <a class="navbar-brand" id="header-nav__home" href="/">ホーム</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-           >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto"></ul>
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a id="header-nav__login" href="/login">ログイン</a>
-              </li>
-              <li class="nav-item">
-                <a id="header-nav__register" href="/register">ユーザー登録</a>
-              </li>
-            </ul>
-          </div>
+     <header>
+        <div class="container text-center">
+          <h1>4 Answers Quiz 4択クイズ&クイズ徹底解説</h1>
+          <a href="/">
+            <img class="header-nav__logo" src="/public/images/header-logo.png" />
+          </a>
         </div>
-      </nav>
-    </header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container">
+            <a class="navbar-brand" id="header-nav__home" href="/"
+              >ホーム</a
+            >
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto"></ul>
+
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a id="header-nav__login" href="/login"
+                    >ログイン</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a id="header-nav__register" href="/register"
+                    >ユーザー登録</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
     <main>
       <div class="container">
         <div class="row">
           <article class="col-sm-8">
             <section class="home-quiz__introduction">
               <h2 class="home-quiz__introduction-h2">
-                <img
-                  class="home-quiz__introduction-h2-logo"
-                  src="/public/images/what-is-mark.png"
-                />4 Answers Quizとは?
+                <img class="home-quiz__introduction-h2-logo" src="/public/images/what-is-mark.png" />4 Answers Quizとは?
               </h2>
-              <p>
-                4 Answers
-                Quizとはビジネスマナーから一般常識に至るまで様々なクイズを4択で出題するWEBアプリです。
-              </p>
+              <p>4 Answers Quizとはビジネスマナーから一般常識に至るまで様々なクイズを4択で出題するWEBアプリです。</p>
               <p>何度もトライしてみて正解率100%を目指してみてください。</p>
             </section>
             <section class="home-quiz__setting">
               <h2 class="home-quiz__setting-h2">
-                <img
-                  class="home-quiz__setting-h2-logo"
-                  src="/public/images/directory-icon.png"
-                />出題設定
+                <img class="home-quiz__setting-h2-logo" src="/public/images/directory-icon.png" />出題設定
               </h2>
               <form action="/quiz" method="post">
                 <label>
-                  <input
-                    type="checkbox"
-                    name="categories[]"
-                    value="1"
-                    checked
-                  />ビジネスマナー
+                  <input type="checkbox" name="categories[]" value="1" checked />ビジネスマナー
                 </label>
                 <label>
-                  <input
-                    type="checkbox"
-                    name="categories[]"
-                    value="2"
-                  />一般常識
+                  <input type="checkbox" name="categories[]" value="2" />一般常識
                 </label>
                 <label>
-                  <input
-                    type="checkbox"
-                    name="categories[]"
-                    value="3"
-                  />就職・転職
+                  <input type="checkbox" name="categories[]" value="3" />就職・転職
                 </label>
                 <label>
                   <input type="checkbox" name="categories[]" value="4" />法律
@@ -92,24 +77,10 @@
                 <label>
                   <input type="checkbox" name="categories[]" value="6" />雑学
                 </label>
-                <div class>
+                <div>
                   全項目チェック
-                  <button
-                    type="button"
-                    name="check_all"
-                    id="check-all"
-                    value="1"
-                  >
-                    ON
-                  </button>
-                  <button
-                    type="button"
-                    name="check_all_off"
-                    id="check-all-off"
-                    value="1"
-                  >
-                    OFF
-                  </button>
+                  <button type="button" name="check_all" id="check-all" value="1">ON</button>
+                  <button type="button" name="check_all_off" id="check-all-off" value="1">OFF</button>
                 </div>
                 <button type="submit" class="btn btn-primary">出題開始</button>
                 <input type="hidden" name="_token" value />
@@ -117,46 +88,24 @@
             </section>
             <section class="home-quiz__ranking">
               <h2 class="home-quiz__ranking-h2">
-                <img
-                  class="home-quiz__ranking-h2-logo"
-                  src="/public/images/graph-icon.png"
-                />ランキング
+                <img class="home-quiz__ranking-h2-logo" src="/public/images/graph-icon.png" />ランキング
               </h2>
               <div>
                 <label>
-                  <input
-                    class="ranking-radio"
-                    type="radio"
-                    name="ranking-radio"
-                    value="1"
-                    checked
-                  />総合
+                  <input class="ranking-radio" type="radio" name="ranking-radio" value="1" checked />総合
                 </label>
                 <label>
-                  <input
-                    class="ranking-radio"
-                    type="radio"
-                    name="ranking-radio"
-                    value="2"
-                  />今月
+                  <input class="ranking-radio" type="radio" name="ranking-radio" value="2" />今月
                 </label>
                 <label>
-                  <input
-                    class="ranking-radio"
-                    type="radio"
-                    name="ranking-radio"
-                    value="3"
-                  />今週
+                  <input class="ranking-radio" type="radio" name="ranking-radio" value="3" />今週
                 </label>
               </div>
               <div class="home_quiz__ranking-chart"></div>
             </section>
             <section class="home__notice">
               <h2 class="home__notice-h2">
-                <img
-                  class="home__notice-h2-logo"
-                  src="/public/images/news-icon.png"
-                />お知らせ情報
+                <img class="home__notice-h2-logo" src="/public/images/news-icon.png" />お知らせ情報
               </h2>
               <dl>
                 <dt>2019/08/23</dt>
@@ -167,7 +116,24 @@
           <aside class="col-sm-4">
             <section class="sidebar-sns-section">
               <h3 class="text-center sidebar-sns-h3">SNS共有</h3>
-              <div class="sidebar-sns-links"></div>
+              <div class="sidebar-sns-links">
+                <ShareNetwork network="twitter" url="" title="shareボタン">
+                  <div class="twitter__share">
+                    <i class="fab fa-twitter"></i> Twitter
+                  </div>
+                </ShareNetwork>
+                <ShareNetwork network="facebook" url="" title="shareボタン">
+                  <div class="facebook__share">
+                    <i class="fab fa-facebook"></i> Facebook
+                  </div>
+                </ShareNetwork>
+                <ShareNetwork network="line" url="" title="shareボタン">
+                  <div class="line__share"><i class="fab fa-line"></i> Line</div>
+                </ShareNetwork>
+                <ShareNetwork network="linkedin" url="" title="shareボタン">
+                  <div class="linkedin__share"><i class="fab fa-linkedin"></i> LinkedIn</div>
+                </ShareNetwork>
+              </div>
             </section>
             <section class="sidebar-keywords">
               <h3 class="text-center sidebar-keywords-h3">キーワード集</h3>
@@ -265,7 +231,6 @@
         </div>
       </div>
     </main>
-
     <footer>
       <div class="container text-center">
         <small>© 2020 4Answers-quiz. All rights reserved.</small>
