@@ -1,48 +1,6 @@
 <template>
   <div>
-     <header>
-        <div class="container text-center">
-          <h1>4 Answers Quiz 4択クイズ&クイズ徹底解説</h1>
-          <a href="/">
-            <img class="header-nav__logo" src="/public/images/header-logo.png" />
-          </a>
-        </div>
-        <nav class="navbar navbar-expand-lg navbar-light">
-          <div class="container">
-            <a class="navbar-brand" id="header-nav__home" href="/"
-              >ホーム</a
-            >
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto"></ul>
-
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a id="header-nav__login" href="/login"
-                    >ログイン</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a id="header-nav__register" href="/register"
-                    >ユーザー登録</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </header>
+    <the-header></the-header>
     <main>
       <div class="container">
         <div class="row">
@@ -77,7 +35,7 @@
                 <label>
                   <input type="checkbox" name="categories[]" value="6" />雑学
                 </label>
-                <div>
+                <div class>
                   全項目チェック
                   <button type="button" name="check_all" id="check-all" value="1">ON</button>
                   <button type="button" name="check_all_off" id="check-all-off" value="1">OFF</button>
@@ -131,7 +89,9 @@
                   <div class="line__share"><i class="fab fa-line"></i> Line</div>
                 </ShareNetwork>
                 <ShareNetwork network="linkedin" url="" title="shareボタン">
-                  <div class="linkedin__share"><i class="fab fa-linkedin"></i> LinkedIn</div>
+                  <div class="linkedin__share">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                  </div>
                 </ShareNetwork>
               </div>
             </section>
@@ -231,10 +191,18 @@
         </div>
       </div>
     </main>
-    <footer>
-      <div class="container text-center">
-        <small>© 2020 4Answers-quiz. All rights reserved.</small>
-      </div>
-    </footer>
+   <the-footer></the-footer>
   </div>
 </template>
+
+<script>
+import TheHeader from "../layout/TheHeader";
+import TheFooter from "../layout/TheFooter";
+
+export default {
+  components: {
+    TheHeader,
+    TheFooter,
+  }
+};
+</script>
