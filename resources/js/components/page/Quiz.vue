@@ -1,41 +1,6 @@
 <template>
   <div>
-    <header>
-      <div class="container text-center">
-        <h1>4 Answers Quiz 4択クイズ&クイズ徹底解説</h1>
-        <a href="/">
-          <img class="header-nav__logo" src="/public/images/header-logo.png" />
-        </a>
-      </div>
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-          <a class="navbar-brand" id="header-nav__home" href="/">ホーム</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-           >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto"></ul>
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a id="header-nav__login" href="/login">ログイン</a>
-              </li>
-              <li class="nav-item">
-                <a id="header-nav__register" href="/register">ユーザー登録</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
+    <the-header></the-header>
     <main>
       <div class="container">
         <div class="row">
@@ -106,8 +71,8 @@
               「なられました」は二重敬語の典型的な表現です。<br>
               『○△商事の□□様がお越しになりました。』が正解です。<br>
             </div>
-            <button type="button" class="btn btn-primary d-block mx-auto quiz-next__button">次の問題へ</button>
-            <button type="button" class="d-block mx-auto quiz-finish__button">結果を見る</button>
+            <button type="button"                 class="btn btn-primary d-block mx-auto quiz-next__button">次の問題へ</button>
+            <button type="button"                 class="d-block mx-auto quiz-finish__button">結果を見る</button>
           </section>
           </article>
           <aside class="col-sm-4">
@@ -128,7 +93,9 @@
                   <div class="line__share"><i class="fab fa-line"></i> Line</div>
                 </ShareNetwork>
                 <ShareNetwork network="linkedin" url="" title="shareボタン">
-                  <div class="linkedin__share"><i class="fab fa-linkedin"></i> LinkedIn</div>
+                  <div class="linkedin__share">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                  </div>
                 </ShareNetwork>
               </div>
             </section>
@@ -228,10 +195,18 @@
         </div>
       </div>
     </main>
-    <footer>
-      <div class="container text-center">
-        <small>© 2020 4Answers-quiz. All rights reserved.</small>
-      </div>
-    </footer>
+    <the-footer></the-footer>
   </div>
 </template>
+
+<script>
+import TheHeader from "../layout/TheHeader";
+import TheFooter from "../layout/TheFooter";
+
+export default {
+  components: {
+    TheHeader,
+    TheFooter,
+  }
+};
+</script>
